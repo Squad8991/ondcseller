@@ -34,17 +34,13 @@ public class LoginTest extends BaseClass {
         lp.enterPassword(password);
         lp.clickLogin();
 
-        // Wait for the page navigation (wait until the page title changes or some element appears)
-        page.waitForNavigation(null);  // This will wait for navigation to complete after clicking login
-
-        // Verify page title after login
         String actualTitle = page.title();
         String expectedTitle = "Squadcube | React eCommerce Admin Dashboard";
         Assert.assertEquals(actualTitle, expectedTitle, "Page title does not match after login.");
 
-        // Log out after successful login
         lp.clickProfile();
         lp.clickLogout();
+        page.waitForTimeout(3000);
     }
 
     @Test(priority = 2)
@@ -52,14 +48,12 @@ public class LoginTest extends BaseClass {
         // Enter invalid credentials
         lp.clearUsername();
         lp.clearPassword();
-        lp.enterUsername("invalidUser");
+        lp.enterUsername(username);
         lp.enterPassword("invalidPass");
         lp.clickLogin();
 
-        // Wait for the error message to appear
-        page.waitForTimeout(3000);  // Wait for 3 seconds (adjust as needed)
+        page.waitForTimeout(3000);
 
-        // Verify that error message is displayed
         Assert.assertTrue(lp.isErrorMessageDisplayed(), "Error message not displayed for invalid login.");
     }
 

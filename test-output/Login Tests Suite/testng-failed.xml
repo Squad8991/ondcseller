@@ -5,10 +5,8 @@
     <classes>
       <class name="testcases.LoginTest">
         <methods>
-          <include name="testPasswordMasking"/>
           <include name="initialize"/>
           <include name="tearDown"/>
-          <include name="testValidLogin"/>
           <include name="setUp"/>
           <include name="testInvalidLogin"/>
         </methods>
