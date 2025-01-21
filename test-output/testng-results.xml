@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-21T11:02:00 IST" name="Login Tests Suite" finished-at="2025-01-21T11:02:25 IST" duration-ms="24636">
+    <groups>
+    </groups>
+    <test started-at="2025-01-21T11:02:00 IST" name="Login Test Cases" finished-at="2025-01-21T11:02:25 IST" duration-ms="24636">
+      <class name="testcases.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.LoginTest@37afeb11]" started-at="2025-01-21T11:02:00 IST" name="setUp" finished-at="2025-01-21T11:02:16 IST" duration-ms="15814" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:testcases.LoginTest@37afeb11]" started-at="2025-01-21T11:02:16 IST" name="initialize" finished-at="2025-01-21T11:02:16 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="testValidLogin()[pri:1, instance:testcases.LoginTest@37afeb11]" started-at="2025-01-21T11:02:16 IST" name="testValidLogin" finished-at="2025-01-21T11:02:17 IST" duration-ms="504" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.lang.Runnable.run()" because "code" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.lang.Runnable.run()" because "code" is null
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:128)
+at com.microsoft.playwright.impl.FrameImpl.waitForNavigationImpl(FrameImpl.java:1041)
+at com.microsoft.playwright.impl.FrameImpl.waitForNavigationImpl(FrameImpl.java:1021)
+at com.microsoft.playwright.impl.PageImpl.waitForNavigationImpl(PageImpl.java:1459)
+at com.microsoft.playwright.impl.PageImpl.lambda$waitForNavigation$89(PageImpl.java:1449)
+at com.microsoft.playwright.impl.WaitForEventLogger.lambda$get$0(WaitForEventLogger.java:50)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+at com.microsoft.playwright.impl.WaitForEventLogger.get(WaitForEventLogger.java:41)
+at com.microsoft.playwright.impl.ChannelOwner.withWaitLogging(ChannelOwner.java:87)
+at com.microsoft.playwright.impl.PageImpl.waitForNavigation(PageImpl.java:1449)
+at com.microsoft.playwright.Page.waitForNavigation(Page.java:7877)
+at testcases.LoginTest.testValidLogin(LoginTest.java:38)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method signature="testInvalidLogin()[pri:2, instance:testcases.LoginTest@37afeb11]" started-at="2025-01-21T11:02:17 IST" name="testInvalidLogin" finished-at="2025-01-21T11:02:25 IST" duration-ms="7896" status="FAIL">
+          <exception class="com.microsoft.playwright.impl.TargetClosedError">
+            <message>
+              <![CDATA[Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError:Target page, context or browser has been closed
+Error
+    at captureRawStack (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\stackTrace.js:50:17)
+    at LongStandingScope._race (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:91:52)
+    at LongStandingScope.race (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:84:17)
+    at C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:81:43
+    at Array.map (<anonymous>)
+    at LongStandingScope.raceMultiple (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:81:32)
+    at Frame.retryWithProgressAndTimeouts (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\frames.js:931:40)
+    at async C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\frames.js:1023:29
+    at async ProgressController.run (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\progress.js:79:22)
+    at async FrameDispatcher.click (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\frameDispatcher.js:158:12)
+    at async LongStandingScope._race (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\dispatcher.js:96:14)
+    at async DispatcherConnection.dispatch (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\dispatcher.js:361:22)
+}
+Call log:
+-   - waiting for locator("button[type='submit']")
+-     - locator resolved to <button disabled type="submit" class="bg-emerald-600 rounded-md mt-4 h-12 w-full opacity-50 cursor-not-allowed text-white text-sm h-12 font-semibold align-bottom inline-flex items-center justify-center leading-5 transition-colors duration-150 focus:outline-none">…</button>
+-   - attempting click action
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not enabled
+-     - retrying click action
+-     - waiting 20ms
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not enabled
+-     - retrying click action
+-       - waiting 100ms
+-     - waiting for element to be visible, enabled and stable
+-     - element is not enabled
+-   - retrying click action
+-     - waiting 500ms
+-     - waiting for element to be visible, enabled and stable
+-     - element is not visible
+-   - retrying click action
+-     - waiting 500ms
+-     - waiting for element to be visible, enabled and stable
+-   - element was detached from the DOM, retrying
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.impl.TargetClosedError: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError:Target page, context or browser has been closed
+Error
+    at captureRawStack (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\stackTrace.js:50:17)
+    at LongStandingScope._race (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:91:52)
+    at LongStandingScope.race (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:84:17)
+    at C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:81:43
+    at Array.map (<anonymous>)
+    at LongStandingScope.raceMultiple (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:81:32)
+    at Frame.retryWithProgressAndTimeouts (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\frames.js:931:40)
+    at async C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\frames.js:1023:29
+    at async ProgressController.run (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\progress.js:79:22)
+    at async FrameDispatcher.click (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\frameDispatcher.js:158:12)
+    at async LongStandingScope._race (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\dispatcher.js:96:14)
+    at async DispatcherConnection.dispatch (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\dispatcher.js:361:22)
+}
+Call log:
+-   - waiting for locator("button[type='submit']")
+-     - locator resolved to <button disabled type="submit" class="bg-emerald-600 rounded-md mt-4 h-12 w-full opacity-50 cursor-not-allowed text-white text-sm h-12 font-semibold align-bottom inline-flex items-center justify-center leading-5 transition-colors duration-150 focus:outline-none">…</button>
+-   - attempting click action
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not enabled
+-     - retrying click action
+-     - waiting 20ms
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not enabled
+-     - retrying click action
+-       - waiting 100ms
+-     - waiting for element to be visible, enabled and stable
+-     - element is not enabled
+-   - retrying click action
+-     - waiting 500ms
+-     - waiting for element to be visible, enabled and stable
+-     - element is not visible
+-   - retrying click action
+-     - waiting 500ms
+-     - waiting for element to be visible, enabled and stable
+-   - element was detached from the DOM, retrying
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:175)
+at com.microsoft.playwright.Locator.click(Locator.java:2493)
+at pageobjects.LoginPage.clickLogin(LoginPage.java:34)
+at testcases.LoginTest.testInvalidLogin(LoginTest.java:57)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError:Target page, context or browser has been closed
+Error
+    at captureRawStack (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\stackTrace.js:50:17)
+    at LongStandingScope._race (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:91:52)
+    at LongStandingScope.race (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:84:17)
+    at C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:81:43
+    at Array.map (<anonymous>)
+    at LongStandingScope.raceMultiple (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:81:32)
+    at Frame.retryWithProgressAndTimeouts (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\frames.js:931:40)
+    at async C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\frames.js:1023:29
+    at async ProgressController.run (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\progress.js:79:22)
+    at async FrameDispatcher.click (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\frameDispatcher.js:158:12)
+    at async LongStandingScope._race (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\dispatcher.js:96:14)
+    at async DispatcherConnection.dispatch (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\dispatcher.js:361:22)
+}
+Call log:
+-   - waiting for locator("button[type='submit']")
+-     - locator resolved to <button disabled type="submit" class="bg-emerald-600 rounded-md mt-4 h-12 w-full opacity-50 cursor-not-allowed text-white text-sm h-12 font-semibold align-bottom inline-flex items-center justify-center leading-5 transition-colors duration-150 focus:outline-none">…</button>
+-   - attempting click action
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not enabled
+-     - retrying click action
+-     - waiting 20ms
+-     2 × waiting for element to be visible, enabled and stable
+-       - element is not enabled
+-     - retrying click action
+-       - waiting 100ms
+-     - waiting for element to be visible, enabled and stable
+-     - element is not enabled
+-   - retrying click action
+-     - waiting 500ms
+-     - waiting for element to be visible, enabled and stable
+-     - element is not visible
+-   - retrying click action
+-     - waiting 500ms
+-     - waiting for element to be visible, enabled and stable
+-   - element was detached from the DOM, retrying
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+... 39 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.impl.TargetClosedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLogin -->
+        <test-method signature="testPasswordMasking()[pri:3, instance:testcases.LoginTest@37afeb11]" started-at="2025-01-21T11:02:25 IST" name="testPasswordMasking" finished-at="2025-01-21T11:02:25 IST" duration-ms="5" status="FAIL">
+          <exception class="com.microsoft.playwright.impl.TargetClosedError">
+            <message>
+              <![CDATA[Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:491:21)
+}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.impl.TargetClosedError: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:491:21)
+}
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:335)
+at com.microsoft.playwright.impl.FrameImpl.lambda$fill$14(FrameImpl.java:325)
+at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:325)
+at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:250)
+at com.microsoft.playwright.impl.LocatorImpl.clear(LocatorImpl.java:167)
+at com.microsoft.playwright.Locator.clear(Locator.java:2432)
+at pageobjects.LoginPage.clearUsername(LoginPage.java:53)
+at testcases.LoginTest.testPasswordMasking(LoginTest.java:68)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\server\dispatchers\dispatcher.js:273:44)
+    at transport.onmessage (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\VICKYS~1\AppData\Local\Temp\playwright-java-11504324746621157316\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:491:21)
+}
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+... 40 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.impl.TargetClosedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPasswordMasking -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.LoginTest@37afeb11]" started-at="2025-01-21T11:02:25 IST" name="tearDown" finished-at="2025-01-21T11:02:25 IST" duration-ms="357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.LoginTest -->
+    </test> <!-- Login Test Cases -->
+  </suite> <!-- Login Tests Suite -->
+</testng-results>
