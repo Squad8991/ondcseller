@@ -9,19 +9,19 @@ public class BaseClass {
     protected Playwright playwright;
     protected Browser browser;
     protected Page page;
-
-    // Setup Playwright
+    
     @BeforeClass
     public void setUp() {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-        page = browser.newPage();
-        
-        // Open URL
+
+        Browser.NewContextOptions contextOptions = new Browser.NewContextOptions().setViewportSize(null);
+        page = browser.newContext(contextOptions).newPage();
+
         String url = new ConfigReader().getURL();
         page.navigate(url);
     }
-    
+
     @AfterClass
     public void tearDown() {
         if (browser != null) {

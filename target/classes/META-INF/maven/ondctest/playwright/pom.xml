@@ -3,23 +3,24 @@
   <groupId>ondctest</groupId>
   <artifactId>playwright</artifactId>
   <version>0.0.1-SNAPSHOT</version>
- <dependencies>
-  <dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.10.2</version>
-    <scope>test</scope>
- </dependency>
- 
- <!-- https://mvnrepository.com/artifact/com.microsoft.playwright/playwright -->
-<dependency>
-    <groupId>com.microsoft.playwright</groupId>
-    <artifactId>playwright</artifactId>
-    <version>1.49.0</version>
-</dependency>
+  <dependencies>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.10.2</version>
+      <scope>test</scope>
+    </dependency>
 
- 
- </dependencies> 
- 
+    <dependency>
+      <groupId>com.microsoft.playwright</groupId>
+      <artifactId>playwright</artifactId>
+      <version>1.49.0</version>
+    </dependency>
 
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.1.2</version>
+    </dependency>
+  </dependencies>
 </project>

@@ -7,8 +7,9 @@
         <methods>
           <include name="initialize"/>
           <include name="tearDown"/>
+          <include name="testBlankUsernameWithValidPassword"/>
+          <include name="testBlankPasswordWithValidUsername"/>
           <include name="setUp"/>
-          <include name="testInvalidLogin"/>
         </methods>
       </class> <!-- testcases.LoginTest -->
     </classes>

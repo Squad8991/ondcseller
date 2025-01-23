@@ -7,11 +7,16 @@ public class LoginPage {
     private final Page page;
 
     // Locators
-    private final String usernameField = "input[name='email']";  // CSS Selector
-    private final String passwordField = "input[name='password']";  // CSS Selector
-    private final String loginButton = "button[type='submit']";  // CSS Selector
-    private final String profileIcon = "div.absolute.inset-0.rounded-full.shadow-inner";  // CSS Selector
-    private final String errorMessageLocator = "//div[contains(@class, 'error-message') or contains(@class, 'alert')]"; // XPath
+    private final String usernameField = "input[name='email']"; 
+    private final String passwordField = "input[name='password']"; 
+    private final String loginButton = "//button[@type='submit']"; 
+    private final String profileIcon = "div.absolute.inset-0.rounded-full.shadow-inner";  
+    private final String errorMessageLocator = "//div[contains(text(),'Invalid Email or password!')]"; 
+    private final String forgotPasswordLink = "//a[@class='text-sm font-medium text-emerald-500 dark:text-emerald-400 hover:underline']"; 
+    private final String recoverPasswordButton = "text=Recover password";
+    private final String emailFieldForRecovery = "//input[@placeholder='john@doe.com']"; 
+    private final String passwordRecoverySuccessMessage = "div.success-message"; 
+    private final String errorMessageRecovery = "div.error-message";
 
     // Constructor
     public LoginPage(Page page) {
@@ -31,14 +36,13 @@ public class LoginPage {
     }
 
     public void clickLogin() {
-        page.locator(loginButton).click();
+        page.locator(loginButton).click(); 
     }
 
     public boolean isErrorMessageDisplayed() {
         try {
-            // Wait for the error message to appear in the DOM (timeout 5 seconds)
             page.waitForSelector(errorMessageLocator, new Page.WaitForSelectorOptions().setTimeout(5000));
-            return page.locator(errorMessageLocator).isVisible();
+            return page.locator(errorMessageLocator).isVisible(); 
         } catch (Exception e) {
             return false;
         }
@@ -63,5 +67,52 @@ public class LoginPage {
 
     public void clickLogout() {
         page.locator("role=button[name='Log Out']").click();
+    }
+
+    // Forgot password actions
+    public void clickForgotPassword() {
+        page.locator(forgotPasswordLink).click();
+    }
+
+    public void enterEmailForPasswordRecovery(String email) {
+        page.locator(emailFieldForRecovery).fill(email);
+    }
+
+    public void clickRecoverPassword() {
+        page.locator(recoverPasswordButton).click();
+    }
+
+    public boolean isPasswordRecoverySuccessMessageDisplayed() {
+        try {
+            page.waitForSelector(passwordRecoverySuccessMessage, new Page.WaitForSelectorOptions().setTimeout(5000));
+            return page.locator(passwordRecoverySuccessMessage).isVisible(); 
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isErrorMessageDisplayedForRecovery() {
+        try {
+            page.waitForSelector(errorMessageRecovery, new Page.WaitForSelectorOptions().setTimeout(5000));
+            return page.locator(errorMessageRecovery).isVisible(); 
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clearEmailForPasswordRecovery() {
+        page.locator(emailFieldForRecovery).clear();
+    }
+
+    public String getEmailFieldForRecovery() {
+        return emailFieldForRecovery;
+    }
+
+    public String getRecoverPasswordButton() {
+        return recoverPasswordButton;
+    }
+
+    public String getLoginLink() {
+        return "text=Already have an account? Login"; 
     }
 }
